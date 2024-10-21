@@ -103,7 +103,7 @@ pub mod db_name {
 #[derive(Clone)]
 pub struct Index {
     /// The LMDB environment which this index is associated with.
-    pub(crate) env: heed::Env,
+    pub env: heed::Env,
 
     /// Contains many different types (e.g. the fields ids map).
     pub(crate) main: Database<Unspecified, Unspecified>,
@@ -165,7 +165,7 @@ pub struct Index {
     pub vector_arroy: arroy::Database<Unspecified>,
 
     /// Maps the document id to the document as an obkv store.
-    pub(crate) documents: Database<BEU32, ObkvCodec>,
+    pub documents: Database<BEU32, ObkvCodec>,
 }
 
 impl Index {
