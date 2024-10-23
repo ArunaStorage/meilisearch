@@ -396,7 +396,7 @@ impl Index {
 
     /// Writes the fields ids map which associate the documents keys with an internal field id
     /// (i.e. `u8`), this field id is used to identify fields in the obkv documents.
-    pub(crate) fn put_fields_ids_map(
+    pub fn put_fields_ids_map(
         &self,
         wtxn: &mut RwTxn<'_>,
         map: &FieldsIdsMap,
